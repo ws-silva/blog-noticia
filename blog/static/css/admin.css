@@ -1,0 +1,92 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Helvetica', sans-serif;
+}
+
+
+#admin{
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    width: 80%;
+    margin: 3% 10% 0% 10%;
+    border: 2px solid black;
+    flex-direction: column;
+    justify-content: center;
+    height: 200px;
+}
+
+#menu-noticia{
+    display: flex;
+    flex-direction: column;
+    margin: 5% 0% 0% 0%;
+    
+}
+
+#bloco-cards{
+    width: 90%;
+    margin: 0% 5% 5% 5%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.div-noticia{
+    width: 90%;
+    margin: 0% 5% 5% 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.div-noticia h1{
+    margin-bottom: 30px;
+}
+
+.noticia-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 250px;
+    box-shadow: 5px 10px 18px #888888;
+    border-radius: 10px;
+    height: 400px;
+    align-items: center;
+    border-radius: 0px 0px 10px 10px;
+}
+
+.noticia-card img{
+    width: 250px;
+    height: 130px;
+    border-radius: 10px 10px 0px 0px;
+}
+.noticia-card a{
+     background-color: black;
+     color: white;
+     text-decoration: none;
+     padding: 7px;
+     border-radius: 5px 5px 5px 5px;
+     margin: 10px;
+}
+.noticia-card a:hover{
+    color: black;
+    border: 1px solid black;
+    background-color: white;
+}
+
+#nova-tarefa{
+    width: 80%;
+    margin: 2% 10% 0% 10%;
+    display: flex;
+    justify-content: center;
+    
+}
+
+#nova-tarefa a{
+    text-decoration: none;
+    background-color: black;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+}

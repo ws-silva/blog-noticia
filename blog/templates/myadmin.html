@@ -1,0 +1,74 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock%}</title>
+    <link rel="stylesheet" href="{% static 'css/admin.css' %}">
+</head>
+
+<body>
+    <div id="admin">
+        	<h1>Sistema admin</h1>
+            <p>Painel do admin responsavél pelas alterações na página inicial</p>
+    </div>
+    
+    <div id="nova-tarefa">
+        <a href="nova/">Adicionar notiícia</a>
+    </div>
+    
+
+    <div id="menu-noticia">
+
+        <div class="div-noticia">
+                <h1>Notícias destaque</h1>
+                <div id="bloco-cards">
+                    {% for noticia in noticias_dt%}
+                        <div class="noticia-card">
+                            <img src="media/{{ noticia.img}}" alt="">
+                            <h3>{{noticia.titulo}}</h3>
+                            
+                            <p>{{ noticia.sub_titulo }}</p>
+                                
+                            <a href="editar/{{ noticia.id }}">Editar</a>
+                        </div>
+                    {% endfor %}
+                </div>
+        </div>
+       
+        
+        <div class="div-noticia">
+                <h1>Noticías semanal</h1>
+                <div id="bloco-cards">
+                    {% for noticia in noticias_se %}
+                        <div  class="noticia-card">
+                            <img src="media/{{ noticia.img}}" alt="">
+                            <h3>{{noticia.titulo}}</h3>
+                            <p>{{noticia.sub_titulo}}</p>
+                            
+                            <a href="editar/{{ noticia.id }}">Editar</a>
+                        </div>
+                    {% endfor %}
+                </div>
+        </div>
+        
+        <div class="div-noticia">
+                <h1>Noticías</h1>
+                <div id="bloco-cards">
+                    {% for noticia in noticias_pa %}
+                        <div  class="noticia-card">
+                            <img src="media/{{ noticia.img}}" alt="">
+                            <h3>{{noticia.titulo}}</h3>
+                            <p>{{noticia.sub_titulo}}</p>
+                            <a href="editar/{{ noticia.id }}">Editar</a>
+                        </div>
+                    {% endfor %}
+                </div>
+        </div>
+        
+    </div>
+    
+</body>
+</html>

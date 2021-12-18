@@ -1,0 +1,78 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+{% block content %}
+<div id="menu-noticia">
+
+    <div class="div-noticia">
+            <h1>Notícias destaque</h1>
+            <div id="bloco-cards">
+                {% for noticia in noticias_dt%}
+                    <div class="noticia-card">
+                        <img src="media/{{ noticia.img}}" alt="">
+                        <h3>{{noticia.titulo}}</h3>
+                        <p>{{noticia.sub_titulo}}</p>
+                        
+                            
+                        <a href="#abrirModal">ver mais</a>
+                        
+                        <div id="abrirModal" class="modal">
+                            <a href="#fechar" title="Fechar" class="fechar">x</a>
+                            <div>
+                                <h2>Informações:</h2>
+                                <p>{{ noticia.info }}</p>
+                            </div>
+                            
+                        </div>
+
+                    </div>
+                {% endfor %}
+            </div>
+    </div>
+   
+    
+    <div class="div-noticia">
+            <h1>Noticías semanal</h1>
+            <div id="bloco-cards">
+                {% for noticia in noticias_se %}
+                    <div  class="noticia-card">
+                        <img src="media/{{ noticia.img}}" alt="">
+                        <h3>{{noticia.titulo}}</h3>
+                        <p>{{noticia.sub_titulo}}</p>
+                        <a href="#abrirModal">ver mais</a>
+
+                        <div id="abrirModal" class="modal">
+                            <a href="#fechar" title="Fechar" class="fechar">x</a>
+                            <h2>Informações</h2>
+                            <p>{{ noticia.info }}</p>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+    </div>
+    
+    <div class="div-noticia">
+            <h1>Noticías</h1>
+            <div id="bloco-cards">
+                {% for noticia in noticias_pa %}
+                    <div  class="noticia-card">
+                        <img src="media/{{ noticia.img}}" alt="">
+                        <h3>{{noticia.titulo}}</h3>
+                        <p>{{noticia.sub_titulo}}</p>
+                        <a href="#abrirModal">ver mais</a>
+
+                        <div id="abrirModal" class="modal">
+                            <a href="#fechar" title="Fechar" class="fechar">x</a>
+                            <h2>Informações</h2>
+                            <p>{{ noticia.info }}</p>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+    </div>
+    
+    
+    
+</div>
+
+{% endblock %}
